@@ -1,0 +1,17 @@
+<div class="event-review-modal" style="">
+    
+    <p class="event-review-header">Submit an Event Review</p>
+
+    <form class="event-review-data">
+        <input type='hidden'    ng-model='eventReview.eventId' />
+        <input type='text'      ng-model='eventReview.name'    placeholder="Name"     id="event-review-username"/><br/>
+        <input type='text'      ng-model='eventReview.email'   placeholder="E-Mail"   id="event-review-email"/><br/>
+        <textarea               ng-model='eventReview.comment' placeholder="Review.." id="event-review-comment"></textarea><br/>
+        <input type='hidden'    ng-model='eventReview.format'  />
+        <div id='event-review-recaptcha' ng-init='getCaptcha()'></div>
+    </form>
+        
+    
+    <button id="cancelEventReview" ng-click="cancel()">Cancel</button>
+    <button id="submitEventReview" ng-click="submitEventReview()">Submit Review</button>
+</div>
