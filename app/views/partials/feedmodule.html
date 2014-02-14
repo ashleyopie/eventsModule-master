@@ -1,0 +1,21 @@
+<section id="module-position-18" class="card-sidebar livefeed-module livefeed-sidebar">
+	<div class="sidebar-title-wrapper">
+		<h6 class="sidebar-title livefeed-sidebar-title home">Right Now</h6>
+	</div>
+	<div class="sidebar-content livefeed-sidebar-content home" >
+		<ul class="livefeed-news-list home live-feed-wide" >
+			<li  class="live-feed-news-item home" ng-repeat="entry in feed | orderBy:'publishedDate':true" >
+				<a href="{{entry.link}}" class="livefeed-news-item-link  livefeed-li-first   ">
+					<p class="live-feed-headline home article">{{entry.title}}</p>
+					<div class="live-feed-layout">
+						<p class="live-feed-timesince">
+							<!-- <p class="live-feed-action">{{entry.author}}</p> -->
+							<span class="live-feed-timestamp live-feed-timesince-span home">{{entry.publishedDate | date:'EEE MMM d, yyyy @ h:mm a'}}</span>
+						</p>
+					</div>
+					<div class="clearfix-1440"></div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</section>

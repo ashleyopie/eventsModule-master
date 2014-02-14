@@ -1,0 +1,76 @@
+<section id="module-position-3" class="card-primary hero-module">
+                    <div class="front-bump-shadow"></div>
+                    <!-- hero stuff -->
+                    <div class="hero hero-3up card-hero-3up">
+                              <div class="hero-3up-tile hero-asset-open card-hero-3up-tile opinion active card-hero-3up-tile-1 hero-3up-tile-1">
+                              <span class="parent-label opinion"> {{venue[0].title}} </span>
+                              <div class="hero-3up-media">
+                                  <a href="#/venue/{{venue[0].id}}">
+                                      <img src="{{events[0].default_image.image}}" height="100%" width="100%">
+                                  </a>
+                                  <div class="hero-text">
+                                    <div class="hero-story">
+                                        <h1>
+                                            <a class="load story" href="#/venue/{{venue[0].id}}">{{venue[0].title}}</a>
+                                        </h1>
+                                        <ul class="actions clearfix">
+                                          <li class="readContainer hero-actions-list-items">
+                                              <a class="spike read" href="#/venue/{{venue[0].id}}">{{venue[0].online_description | limitTo: 100}} </a>
+                                          </li>
+                                          <li class="hero-actions-list-items">
+                                              <div class="byline-block">
+                                                  <span class="byline">
+                                                    <span class="author"><em>{{venue[0].location}}</em></span>
+                                                  </span>
+                                              </div>
+                                          </li>
+                                        </ul>
+                                    </div>
+                                  </div>  
+                              </div>
+                        </div>
+
+                      <div class="hero-3up-tile hero-asset-open card-hero-3up-tile opinion card-hero-3up-tile-2 hero-3up-tile-2">
+                          <span class="parent-label opinion">{{venue[1].title}}</span>
+                          <div class="hero-3up-media">
+                              <a href="#/venue/{{venue[1].id}}">
+                                  <img src="{{events[1].default_image.image}}" height="100%" width="100%">
+                              </a>
+                              <div class="hero-text">
+                                  <div class="hero-story">
+                                      <h1><a class="load-story" href="#/venue/{{venue[1].id}}">{{venue[1].title}}</a>
+                                      </h1>
+                                      <ul class="actions clearfix">
+                                          <li class="readContainer hero-actions-list-items">
+                                              <a class="spike read" href="#/venue/{{venue[1].id}}">{{venue[1].occurrences[0].startdatetime | date:'MM/dd/yyyy'}}</a>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                          </div>
+                         <div class="hero-3up-tile hero-asset-open card-hero-3up-tile opinion card-hero-3up-tile-3 hero-3up-tile-3">
+                            <span class="parent-label opinion">{{venue[2].title}}</span>
+                            <div class="hero-3up-media">
+                                <a href="#/venue/{{venue[2].id}}">
+                                    <img src="{{events[2].default_image.image}}" height="100%" width="100%">
+                                </a>
+                                <div class="hero-text">
+                                    <div class="hero-story">
+                                        <h1><a class="load-story" href="#/venue/{{venue[2].id}}">{{venue[2].title}}</a></h1>
+                                        <ul class="actions clearfix">
+                                            <li class="readContainer hero-actions-list-items">
+                                                <a class="spike read" href="#/venue/{{venue[2].id}}">{{venue[2].occurrences[0].startdatetime | date:'MM/dd/yyyy'}}</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>  
+                         </div>
+                      </div>
+
+
+                    <div class="below-hero-ad-module clearfix">
+                      <div class="below-hero-popular"></div>
+                      <div class="below-hero-ad partner-placement"></div>
+                    </div>
+                  </section>

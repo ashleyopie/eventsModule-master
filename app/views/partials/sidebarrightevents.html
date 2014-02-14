@@ -1,0 +1,25 @@
+<section id="module-position-10" class="card-sidebar livefeed-module livefeed-sidebar">
+
+                                  <div class="sidebar-title-wrapper" >
+                                         <h6 class="sidebar-title livefeed-sidebar-title opinion">Best Bets</h6>
+                                  </div>
+                                  <div class="sidebar-content livefeed-sidebar-content opinion" ng-controller="BestbetssidebarCtrl" ng-cloak>
+                                    <ul class="livefeed-news-list opinion live-feed-wide" >
+                                      <li class="live-feed-news-item opinion has-image" ng-repeat="event in events">
+                                        <a href="http://{{event.website}}" class="livefeed-news-item-link livefeed-li-first">
+                                          <div class="live-feed-thumb">
+                                            <img src="{{event.default_image.image}}" class="live-feed-thumb-img">
+                                          </div>
+                                          <div class="live-feed-layout" style="float:right;">
+                                            <p class="live-feed-time-since">
+                                              <span class="live-feed-humanized live-feed-timesince-span opinion">Time</span>
+                                            </p>
+                                          </div>
+                                          <p class="live-feed-headline article" style="width:200px; padding-top:0px;">{{event.title}}</p>
+                                          <p class="live-feed-headline article" style="max-width:201px; float:right; text-align:right; font-size:10px;">{{event.occurrences[0].startdatetime | date:'EEEE MMMM d @ h:mm a'}}<br />{{event.location}}</p>
+                                          <div class="clearfix-1440"></div>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </section>

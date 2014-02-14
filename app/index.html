@@ -1,0 +1,145 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" ng-app="eventsAppApp"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/eventreview.css">
+    <link rel="stylesheet" href="http://www.gannett-cdn.com/indystar/static/css/print.css" media="print">
+    <link rel="stylesheet" href="http://www.gannett-cdn.com/indystar/static/css/bundles/main_modern.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- endbuild -->
+  </head>
+  <body class=" site-theme-dark-blue expanded-footer" >
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <starheader></starheader>
+
+
+
+    <!-- Add your site or application content here -->
+    <div ng-view></div>
+
+    <div class="partner-overlay">
+        <div class="partner-placement" id="ad-position-37" data-monetization-id="high_impact" data-monetization-sizes="elastic">
+          <a href="#" class="partner-close partner-overlay-close"></a>
+        </div>
+      <div class="ui-film show"></div>
+    </div>
+      
+
+
+    </div>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="http://www.gannett-cdn.com/indystar/static/js/libs/modernizr/modernizr.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        
+
+
+        
+
+        <!-- maps tracking includes -->
+        <script src="https://magellan.planetdiscover.com//proxy.js?version=3&channel=indystar&jskey=dca18a10-f7d8-0130-6ec2-000c2973d5a9&libraries"></script>
+        <script src="https://magellan.planetdiscover.com//tracker.js?jskey=dca18a10-f7d8-0130-6ec2-000c2973d5a9"></script>
+        <!-- reCaptcha -->
+        <script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+
+
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/directives/hopeThisHeaderWorks.js"></script>
+        <script src="scripts/directives/starfooter.js"></script>
+        <script src="scripts/controllers/eventList.js"></script>
+
+        <script src="scripts/services/pdAPICall.js"></script>
+        <script src="scripts/directives/mainEventView.js"></script>
+        <script src="scripts/controllers/bestbetsController.js"></script>
+        <script src="scripts/controllers/eventView.js"></script>
+        <script src="scripts/controllers/bestbetsSidebar.js"></script>
+        <script src="scripts/services/singleevent.js"></script>
+        <script src="scripts/controllers/modalController.js"></script>
+        <script src="scripts/filters/eventAttributes.js"></script>
+        <script src="scripts/controllers/searchController.js"></script>
+        <script src="scripts/services/searchQuery.js"></script>
+        <script src="scripts/controllers/mapService.js"></script>
+        <script src="scripts/services/geoHelper.js"></script>
+        <script src="scripts/controllers/diningcontroller.js"></script>
+        <script src="scripts/directives/sidebar.js"></script>
+        <script src="scripts/directives/heroContainer.js"></script>
+        <script src="scripts/directives/weathercontrol.js"></script>
+        <script src="scripts/directives/card-primary.js"></script>
+        <script src="scripts/directives/sidebarright.js"></script>
+        <script src="scripts/directives/sidebarrightevents.js"></script>
+        <script src="scripts/directives/herobets.js"></script>
+        <script src="scripts/directives/card-dining.js"></script>
+        <script src="scripts/controllers/Listingcontroller.js"></script>
+        <script src="scripts/directives/cardlisting.js"></script>
+        <script src="scripts/controllers/ListingDetail.js"></script>
+        <script src="scripts/controllers/VenueDetail.js"></script>
+        <script src="scripts/directives/advsearch.js"></script>
+        <script src="scripts/directives/gmaps.js"></script>
+        <script src="scripts/services/tranformcatevents.js"></script>
+        <script src="scripts/services/tranformres_typedetector.js"></script>
+        <script src="scripts/services/tranformres.js"></script>
+        <script src="scripts/services/createindexed.js"></script>
+        <script src="scripts/controllers/feedmodule.js"></script>
+        <script src="scripts/directives/feedmodule.js"></script>
+        <script src="scripts/services/feedmodule.js"></script>
+        <script src="scripts/services/dateFixer.js"></script>
+        <script src="scripts/directives/smallinput.js"></script>
+        <script src="scripts/services/defaultImages.js"></script>
+        <script src="scripts/controllers/rss_fooddrink.js"></script>
+        <script src="scripts/directives/sidebarright_food.js"></script>
+        <script src="scripts/services/fixAttributes.js"></script>
+        <script src="scripts/services/appConfig.js"></script>
+        <script src="scripts/services/eventreview.js"></script>
+        <script src="scripts/services/proxyAPI.js"></script>
+         <script src="scripts/directives/sidebarrightmainevents.js"></script>
+        <script src="scripts/directives/mapDirections.js"></script>
+        <script src="scripts/controllers/Eventreview.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

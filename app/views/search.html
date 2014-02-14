@@ -1,0 +1,234 @@
+
+      <article id="cards" class="cards">
+        <div class="partner-placement partner-slider-ad">
+          <a href="#" class="partner-slider-close ui-sprite-before">Close</a>
+        </div>
+        <div class="card-container">
+          <div class="card-wrap">
+            <div class="partner-placement partner-pushdown-ad" id="ad-position-53" data-monetization-id="high_impact" data-monetization-sizes="pushdown,iabpushdown,iabpushdown2,billboard">
+              <a href="#" class="partner-close"></a>
+            </div>
+
+
+            <section id="section_home" class="home card   card-bumped" data-section-id="home" data-subsection-id="">
+              <div class="partner-leavebehind compact" id="ad-position-72" style="display: none;"></div>
+              <div class="card-full-width" id="card_full_width_main">
+                <!-- stuff -->
+                <a href="#" class="open-sidebar sidebar-button"><div class="icon"></div> RIGHT NOW</a>
+                <div class="card-primary-wrapper clearfix">
+                  <div class="card-suspender-color home"></div>
+                  <!-- top left sidebar partial -->                  
+                  <div sidebar></div>
+                  <!-- hero controller -->
+                  <section>
+                    <center><h1>Advanced Search</h1></center>
+                    <div class="search" >
+                      <div class="search results">
+                        <div ng-repeat="event in response.events">
+                            <a href="#/events/{{event.id}}">
+                                {{event.title}}
+                            </a>
+                        </div>
+
+                        <div ng-repeat="listing in response.listings" >
+                            <a href="#/venues/{{listing.id}}">
+                                {{listing.title}}
+                            </a>
+                        </div>
+                       
+                        <div ng-repeat="category in response.categories" >  
+                                  {{category.title}}
+                        </div>
+                    </div>
+              
+
+                <div class="search query" >
+                    <form role="form" ng-submit="processForm()">
+                            <div class="row">
+                              {{queryParam}}
+                              <label >Query type</label>
+                              <div class="btn-group">
+                                <button type="button" class="btn btn-primary" ng-model="queryUrl" btn-radio="'Events'">Events</button>
+                                <button type="button" class="btn btn-primary" ng-model="queryUrl" btn-radio="'Venues'">Venues</button>
+                               <button type="button" class="btn btn-primary" ng-model="queryUrl" btn-radio="'Categories'">Categories</button>
+                              </div>
+                            </div>
+
+                            <div class="row" ng-show="displayFields(queryUrl, 1)">
+                              <div class="row">
+                                  <label>Keyword</label> <input type="text" ng-model="queryParam.event.kw" placeholder="keyword" class="form-control">
+                              </div>
+                              <div class="row" >
+                                  <label>Event ID's</label> <input type="text" ng-model="queryParam.event.ids" placeholder="Event ID's (comma separated)" class="form-control">
+                              </div>
+
+                              <div class="row">
+                                <label>Start Date</label> <input type="text" class="form-control" name="startDate" datepicker-popup="{{format}}" ng-model="queryParam.event.sd"  min="minDate" max="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" close-text="Close"> 
+                              </div>
+                              <div class="row">
+                                <label>End Date</label> 
+                                <input type="text" name="endDate" class="form-control" datepicker-popup="{{format}}" ng-model="queryParam.event.ed" is-open="opened" min="minDate" max="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" close-text="Close">
+                              </div>
+                              <div class="row" >
+                                <label>Within ZipCode(s)</label> <input type="text" ng-model="queryParam.event.zip" placeholder="Zipcodes to search (comma separated)" class="form-control">
+                              </div>
+                              <div class="row" >
+                                <label>Venue Id</label> <input type="number" ng-model="queryParam.event.venueId" placeholder="Venue ID" class="form-control">
+                              </div>
+                              <div class="row" >
+                                <label>Category ID's</label> <input type="text" ng-model="queryParam.event.catIds" placeholder="Category ID's to search (comma separated)" class="form-control">
+                              </div>
+                              <div class="row" >
+                                <label>Search Child categories?</label> <input type="checkbox" ng-model="queryParam.event.searchChildCats" placeholder="Search Child Categorires" class="form-control">
+                              </div>
+
+                              <div class="row" >
+                                <label>Search Performer ID</label> <input type="text" ng-model="queryParam.event.performerIds" placeholder="Search specific performer ID's to search (comma separated)" class="form-control">
+                              </div>
+
+                              <div class="row" >
+                                <label>Search Attributes</label> <input type="text" ng-model="queryParam.event.attributeFilter" placeholder="Attribute Filters to search (comma separated)" class="form-control">
+                              </div>
+                            </div>
+
+
+                            <div class="row" ng-show="displayFields(queryUrl, 2)">
+                              <div class="row">
+                                  <label>Listing ID's</label> <input type="text" ng-model="queryParam.listing.ids" placeholder="Listing ID's (comma separated)" class="form-control">
+                              </div>
+                              <div class="row">
+                                  <label>Category ID's</label> <input type="text" ng-model="queryParam.listing.catIds" placeholder="Category ID's (comma separated)" class="form-control">
+                              </div>
+                              <div class="row" >
+                                <label>Search Child categories?</label> <input type="checkbox" ng-model="queryParam.listing.searchChildCats" placeholder="Search Child Category ID's" class="form-control">
+                              </div>
+                              <div class="row" >
+                                <label>Search Attributes</label> <input type="text" ng-model="queryParam.listing.attribFilter" placeholder="need clarification regarding query function" class="form-control">
+                              </div>
+                              <div class="row">
+                                  <label>Keyword</label> <input type="text" ng-model="queryParam.listing.kw" placeholder="keyword" class="form-control">
+                              </div>
+                              <div class="row">
+                                <label>Active venue?</label> <input type="checkbox" ng-model="queryParam.listing.activeVenue">
+                              </div>
+                            </div>
+
+                
+                            <div class="row" ng-show="displayFields(queryUrl, 3)">
+                              <div class="row">
+                                <div class="row">
+                                  <label>List which set of categories?</label>
+                                  <div class="btn-group">
+                                    <button type="button" class="btn btn-primary" ng-model="queryParam.catType" btn-radio="'listings'">Listings</button>
+                                   <button type="button" class="btn btn-primary" ng-model="queryParam.catType" btn-radio="'events'">Events</button>
+                                  </div>
+                                </div>
+
+                                <label>Category</label>
+                                <input type="text" placeholder="typeahead categoriesFlat" typeahead="categoriesFlat for categoriesFlat in getCategories(queryParam.catType) | filter:$viewValue | limitTo:8" typeahead-loading="loadingLocations" typeahead-wait-ms="200" class="form-control" ng-model="queryParam.category">
+                              </div>
+
+                              
+                                <div class="row">
+                                  <label>Category Id's</label> <input type="text" ng-model="queryParam.catids" placeholder="Category Id's (csv)" class="form-control">
+                              </div>
+                            </div>
+
+
+                            <div class="row" ng-hide="displayFields(queryUrl, 3)">
+                              <div class="row">
+                                  <label>Address</label> <input type="text" ng-model="queryParam.address.street" value="307 n pennsylvania" placeholder="street Address" class="form-control">
+                              </div>
+                              <div class="row">
+                                  <label>City/State</label> <input type="text" ng-model="queryParam.address.city" value="indianpolis" placeholder="city" class="form-control">
+                              </div>
+                              <div class="row">
+                                  <label>Zip</label> <input type="text" ng-model="queryParam.address.zip" value="46202" placeholder="zip" class="form-control">
+                              </div>
+                              <div class="row">
+                                  <label>Distance from</label> <input type="text" ng-model="queryParam.address.distance" value="15" placeholder="distance" class="form-control">
+                              </div>
+                            </div>
+                            <!-- </div> -->
+
+                            <div class="row">
+                                <label>Limit</label> 
+                                <select class="form-control"ng-model="queryParam.limit">
+                                  <option value=""></option>
+                                    <option value="10">
+                                        10
+                                    </option>
+                                    <option value="25">
+                                        25
+                                    </option>
+                                    <option value="50">
+                                        50
+                                    </option>
+                                    <option value="100">
+                                        100
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="row">
+                                <label>Sort Filter</label> 
+                                <select class="form-control" ng-model="queryParam.sort">
+                                    <option value="title">
+                                        title
+                                    </option>
+                                    <option value="score">
+                                        score
+                                    </option>
+                                    <option value="random">
+                                        random
+                                    </option>
+                                    <option value="site_title">
+                                        site_title
+                                    </option>
+                                    <option value="dateModified">
+                                        dateModified
+                                    </option>
+                                    <option value="distance">
+                                        distance
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="row">
+                                <label>Indexed start key</label> <input type="number" ng-model="queryParam.start" placeholder="start key" class="form-control">
+                            </div>
+                            <div class="row">
+                              <button type="submit" class="btn btn-default">Submit</button>
+                            </div>
+                        </div>
+                        
+                     
+                    </form>
+                     </div>
+              </section>
+                  <!-- secondary left sidebar . not yet a partial -->
+                  <section id="module-position-4" class="quicklinks-module card-suspender">
+                    <ul class="quick-links-list">
+                    </ul>
+                  </section>
+                  <div weather></div>
+                  
+                  <!-- main card/list container -->
+
+    
+                  <!-- video carousel? wat? -->
+                  <section id="module-position-8" class="video-carousel-module card-primary-suspender">
+                    <div class="video-carousel-suspender card-suspender"></div>
+                  </section>
+                </div>
+                <!-- sidebar content -->
+                <div sidebarright></div>
+              </div>
+
+              <section id="module-position-16" class="blogs-module card-full-width"></section>
+              <div class="sh_bottom"></div>
+            </section>
+          </div>
+        </div>
+      </article>
+
+<starfooter></starfooter>
